@@ -9,14 +9,14 @@ compile_attributes:
 	$(R) -e 'Rcpp::compileAttributes(".")'
 
 docs:
-	$(R) -e 'library("roxygen2"); roxygenize(".", c("rd", "namespace"), load_source)'
+	$(R) -e 'library("roxygen2"); roxygenize(".", c("rd"), load_source)'
 
 build: compile_attributes docs
 	$(R) CMD build .
 
 inst: build
 	$(R) CMD INSTALL ${PKG}*.tar.gz
-	
+
 check: build
 	$(R) CMD check ${PKG}*.tar.gz
 

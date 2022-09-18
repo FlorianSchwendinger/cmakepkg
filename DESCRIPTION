@@ -3,7 +3,7 @@ Type: Package
 Title: 'CMake' Experiments
 Version: 1.0
 Authors@R: person("Florian", "Schwendinger", email = "florianschwendinger@gmx.at", role = c("aut", "cre"))
-Description: Example package on using cmake.
+Description: Example package on using 'cmake'.
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.9)
 LinkingTo: Rcpp

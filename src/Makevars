@@ -28,5 +28,3 @@ libhighs.a:
 	CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" LDFLAGS="$(LDFLAGS)" \
 	${CMAKE} . -DCMAKE_INSTALL_PREFIX=".."; \
 	${MAKE} install)
-
-

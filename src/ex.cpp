@@ -4,7 +4,7 @@
 using namespace Rcpp;
 
 // [[Rcpp::export]]
-int best_number() {
+int rcpp_best_number() {
     BestNumber obj;
     int x = obj.get();
     return x;
