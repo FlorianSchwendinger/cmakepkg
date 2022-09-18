@@ -1,0 +1,9 @@
+#! /bin/sh
+
+if test -z "${CMAKE}"; then CMAKE=`which cmake4` 2> /dev/null; fi
+if test -z "${CMAKE}"; then CMAKE=`which cmake3` 2> /dev/null; fi
+if test -z "${CMAKE}"; then CMAKE=`which cmake2` 2> /dev/null; fi
+if test -z "${CMAKE}"; then CMAKE=`which cmake` 2> /dev/null; fi
+if test -z "${CMAKE}"; then CMAKE=`which /Applications/CMake.app/Contents/bin/cmake` 2> /dev/null; fi
+
+sed -e "s|@CMAKE@|${CMAKE}|" src/Makevars.in > src/Makevars

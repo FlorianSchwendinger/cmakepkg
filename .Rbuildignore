@@ -1,4 +1,5 @@
 ^work
 ^Makefile
 ^src/foo/install.sh
+^src/foo/build
 ^.*.tar.gz

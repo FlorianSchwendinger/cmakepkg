@@ -1,0 +1,20 @@
+PKG_LIBS= -Llib -lfoo
+PKG_CPPFLAGS= -Iinclude
+
+
+# $(SHLIB): libhighs.a  ## This does not work.
+all: libhighs.a $(SHLIB) cleanup
+
+
+libhighs.a:
+	(cd foo; \
+	mkdir -p build; \
+	cd build; \
+	CC="$(CC)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" \
+	CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" LDFLAGS="$(LDFLAGS)" \
+	@CMAKE@ .. -DCMAKE_INSTALL_PREFIX="../.."; \
+	${MAKE} install;)
+
+
+cleanup:
+	rm -rf foo/build;
