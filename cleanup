@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -f src/*.o src/*.so src/*.rds
+rm -rf src/include src/lib src/foo/build

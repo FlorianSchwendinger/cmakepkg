@@ -24,7 +24,9 @@ all: libhighs.a $(SHLIB)
 
 libhighs.a:
 	(cd foo; \
+	mkdir -p build; \
+	cd build; \
 	CC="$(CC)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" \
 	CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	${CMAKE} . -DCMAKE_INSTALL_PREFIX=".."; \
+	${CMAKE} .. -DCMAKE_INSTALL_PREFIX=".."; \
 	${MAKE} install)
