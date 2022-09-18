@@ -2,19 +2,19 @@ PKG_LIBS= -Llib -lfoo
 PKG_CPPFLAGS= -Iinclude
 
 ifeq ($(CMAKE),)
-CMAKE := $(shell which cmake4 2> /dev/null)
+CMAKE = $(shell which cmake4 2> /dev/null)
 endif
 ifeq ($(CMAKE),)
-CMAKE := $(shell which cmake3 2> /dev/null)
+CMAKE = $(shell which cmake3 2> /dev/null)
 endif
 ifeq ($(CMAKE),)
-CMAKE := $(shell which cmake2 2> /dev/null)
+CMAKE = $(shell which cmake2 2> /dev/null)
 endif
 ifeq ($(CMAKE),)
-CMAKE := $(shell which cmake 2> /dev/null)
+CMAKE = $(shell which cmake 2> /dev/null)
 endif
 ifeq ($(CMAKE),)
-CMAKE := $(shell which /Applications/CMake.app/Contents/bin/cmake 2> /dev/null)
+CMAKE = $(shell which /Applications/CMake.app/Contents/bin/cmake 2> /dev/null)
 endif
 
 
