@@ -12,7 +12,7 @@ libhighs.a:
 	cd build; \
 	CC="$(CC)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" \
 	CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" LDFLAGS="$(LDFLAGS)" \
-	@CMAKE@ .. -DCMAKE_INSTALL_PREFIX="../.."; \
+	@CMAKE@ .. -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="../.."; \
 	${MAKE} install;)
 
 
